@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    font-family: cursive;
+}
+html{
+    font-size: 62.5%;
+}
+header, footer{
+    /* width: 100%; */
+    height: 10vh;
+    background-color: #e8491d;
+    color: white;
+padding: 20px 40px;
+
+}
+div{
+    display: inline-block;
+}
+.logo-continer{
+    width: 30%;
+    height: 100%;
+
+}
+.link{
+    text-decoration: none;
+    color: inherit;
+}
+.images{
+    width: auto;
+    height: auto;
+}
+.logo{
+height: 100%;
+}
+.website-name-box{
+    text-align: right;
+    font-size: 1rem;
+}
+.website-name{
+    font-family: geneva;
+    font-size: 4em;
+}
+header.website-name-box{
+    width: 80%;
+}
+.slogan{
+    font-size: 1.6em;
+}
+main{
+    height: 60vh;
+    background-color: white;
+    color:#e8491d ;
+    font-size: 1.6rem;
+padding-top: 60px;
+}
+form{
+    width: 60%;
+    margin: 0px auto;
+    background-color: white;
+    border: 4px groove #0e121b;
+    padding: 30px 20px;
+    border-radius: 10px;
+}
+.input{
+    display: block;
+    width: 60%;
+    margin-bottom: 15px auto;
+    padding: 5px;
+   
+}
+label{
+    display: inline-block;
+    width: 40%;
+}
+.submit-box{
+    padding-top: 5px;
+    display: block;
+    text-align: center;
+}
+#submit{
+    padding: 10px 20px;
+    border: none;
+    background-color: #e8491d;
+    color: white;
+    font-size:1.2em;
+    border-radius: 15px;
+}
+footer.copyright-box{
+    text-align: center;
+    width: 19%;
+    font-size: 2rem;
+}
+footer.logo-container{
+width: 40%;
+}
+footer.website-name-box{
+    width: 40%;
+    text-align: right;
+}
+</style>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <a href="#" class="homepage-link"></a>
+            <img src="../images/apple-touch-icon.png" alt="apple-touch-icon" title="pic digitals" class="logo images">
+        </div>
+        <div class="website-name-box">
+            <h1 class="website-name">WELCOME</h1>
+            <p class="slogan">...Connecting Dots</p>
+        </div>
+    </header>
+
+    <main>
+        <form class="register-form form">
+
+            <div class="firstname input text-input">
+                <label for="firstname">Firstname:</label>
+                <input type="text" name="firstname" id="firstname" placeholder="firstname">
+            </div>
+            <div class="firstname input text-input">
+                <label for="lastname">Lastname:</label>
+                <input type="text" name="lastname" id="lastname" placeholder="firstname">
+            </div>
+            <div class="email input text-input">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="email">
+            </div>
+            <div class="mobile-number input text-input">
+                <label for="mobile-number">Mobile-number:</label>
+                <input type="text" name="mobile-number" id="mobile-number" placeholder="mobile-number">
+            </div>
+            <div class="password input text-input">
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" placeholder="password">
+            </div>
+            <div class="confirm-password input text-input">
+                <label for="confirm-password">Confirm-password:</label>
+                <input type="password" name="confirm-password" id="confirm-password" placeholder="confirm-password">
+            </div>
+            <div class="submit-box">
+                <input type="submit" id="submit" value="register">
+            </div>
+
+        </form>
+    </main>
+
+    <footer>
+        <div class="logo-container">
+            <a href="#" class="homepage-link link"></a>
+            <img src="../images/apple-touch-icon.png" alt="apple-touch-icon" title="pic digitals" class="logo">
+        </div>
+        <div class="copyright-box">
+            <p class="copyright"> 2022 copyright &copy;</p>
+        </div>
+        <div class="website-name-box">
+            <h1 class="webite-name">MEGAMIND designs</h1>
+            <p class="slogan">...Connecting Dots</p>
+        </div>
+    </footer>
+</body>
+</html>
