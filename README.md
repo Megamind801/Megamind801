@@ -1,5 +1,5 @@
 - 👋 Hi, I’m @Megamind801
-- 👀 I’m interested in HTML,CSS,JAVASCRIPT codings
+- 👀 I’m interested in HTML,CSS,JAVASCRIPT 
 - 🌱 I’m currently learning JAVASCRIPT
 - 💞️ I’m looking to collaborate on WEB DEVELOPMENT
 - 📫 How to reach me: WHATSAPP-+2349049092401, TWITTER-@debola801, INSTAGRAM-debola225
