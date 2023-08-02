@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family:Trebuchet MS;
+        }
+        body{
+            background-color: rgb(216, 224, 231);
+        }
+        img{
+            border-radius: 100%;
+            width: 30px;
+            height: 30px;
+        }
+        .grid-container{
+            height: 100vh;
+            justify-content: center;
+            align-content: center;
+
+            display: grid;
+            grid-template-columns: repeat(4, 250px);
+            grid-template-rows: repeat(2, 250px);
+            grid-gap: 25px;
+        }
+        .box{
+            display: block;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .box1{
+            background-color: blueviolet;
+            grid-column: 1/3;
+            color: white;
+        }
+        .box2{
+            background-color: grey;
+            color: white;
+        }
+        .box3{
+            background-color: #fff;
+            grid-column:4/5;
+            grid-row: 1/3;
+        }
+        .box4{
+            background-color: #fff;
+        }
+        .box5{
+            background-color: rgb(17, 12, 12);
+            grid-column: 2/4;
+            color: white;
+        }
+        .head{
+            display: flex;
+        }
+        .inline{
+            display: block;
+            padding: 10px;
+
+        }
+        h2{
+            font-size: 10px;
+            font-weight: bolder;
+        }
+        .textitem1{
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-size: 2.2vh;
+            font-family: sans-serif;
+        }
+        .textitem2, .inline > p{
+            font-size:1.3vh ;
+            opacity: .6;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="box box1">
+            <div class="head">
+                <img src="./images/image-daniel.jpg">
+               <div class="inline">
+                    <h2>Daniel clifford</h2>
+                    <p>Verified Graduate</p>
+                </div>
+            </div>
+            <div class="text">
+                <div class="textitem1">
+                    <p>I recieved a job offer mid-course, and the subjecti learned were current, if not more so, in the company i joined, i honestly feel i got every penny's worth.</p>
+                </div>
+                <div class="textitem2">
+                    <p>* Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, explicabo? Repudiandae voluptatem, libero quis labore quibusdam est exercitationem consequuntur omnis reprehenderit quasi nobis. Est eius perferendis doloribus quaerat accusamus rem tenetur, tempora consequuntur culpa itaque totam soluta nihil amet sequi? Culpa quia perspiciatis praesentium totam voluptatibus laborum, omnis facere suscipit Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis voluptas maxime dignissimos, distinctio incidunt mollitia blanditiis ex nulla iusto vel perferendis, nobis iure voluptate harum accusamus quisquam eos *</p>
+                </div>
+            </div>
+        </div>
+        <div class="box box2">
+            <div class="head">
+                <img src="./images/image-jonathan.jpg">
+                <div class="inline">
+                    <h2>Jonathan Walters</h2>
+                    <p>Verified Graduate</p>
+                </div>
+            </div>
+            <div class="text">
+                <div class="textitem1">
+                    <p>The team was very supportive and kept me motivated</p>
+                </div>
+                <div class="textitem2">
+                    <p>* Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, explicabo? Repudiandae voluptatem, libero quis labore quibusdam est exercitationem consequuntur omnis reprehenderit quasi nobis. Est eius perferendis doloribus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus error maxime reprehende *</p>
+                </div>
+            </div>
+        </div>
+        <div class="box box3">
+            <div class="head">
+                <img src="./images/image-kira.jpg">
+                <div class="inline">
+                    <h2>Kira whittle</h2>
+                    <p>Verified Graduate</p>
+                </div>
+            </div>
+            <div class="text">
+                <div class="textitem1">
+                    <p>Such a life-changing experince, highly recommended!</p>
+                </div>
+                <div class="textitem2">
+                    <p>* Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, explicabo? Repudiandae voluptatem, libero quis labore quibusdam est exercitationem consequuntur omnis reprehenderit quasi nobis. Est eius perferendis doloribus quaerat accusamus rem tenetur, tempora consequuntur culpa itaque totam soluta nihil amet sequi? Culpa quia perspiciatis praesentium totam voluptatibus laborum, omnis facere suscipit Lorem ipsum dolor sit amet consectetur adipisicing elit. Error necessitatibus accusamus, odit ipsa sint modi minima incidunt nam, illum dolor quis magni dignissimos quos, cupiditate aliquam iusto aut corporis recusandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure adipisci nisi suscipit ullam consectetur modi a unde incidunt. Iusto, voluptatem, consectetur iste pariatur eum ullam repellat maxime maiores aliquam accusamus, quaerat ex eaque tempora voluptates rem perferendis placeat quasi sapiente! Ab a consequatur quisquam error quam quasi architecto amet, illum temporibus eaque assumenda dolor vero eligendi maiores. Sapiente iure velit obcaecati, non dolorem cu Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae repellendus iusto blanditiis excepturi consequatur? Qui aut necessitatibus tempore aperiam eos? *</p>
+                </div>
+            </div>
+        </div>
+        <div class="box box4">
+            <div class="head">
+                <img src="./images/image-jeanette.jpg">
+                <div class="inline">
+                    <h2>Jeanette Harmon</h2>
+                    <p>Verified Graduate</p>
+                </div>
+            </div>
+            <div class="text">
+                <div class="textitem1">
+                    <p>An overall wonderful and rewarding experince</p>
+                </div>
+                <div class="textitem2">
+                    <p>* Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, explicabo? Repudiandae voluptatem, libero quis labore quibusdam est exercitationem consequuntur omnis reprehenderit quasi nobis. Est eius perferendis doloribus. *</p>
+                </div>
+            </div>
+        </div>
+        <div class="box box5">
+            <div class="head">
+                <img src="./images/image-patrick.jpg">
+                <div class="inline">
+                    <h2>Patrick Adams</h2>
+                    <p>Verified Graduate</p>
+                </div>
+            </div>
+            <div class="text">
+                <div class="textitem1">
+                    <p>Awesome teaching support from TAs who did the bootcamp themselves. Getting giudance from them and learning from their experince was easy </p>
+                </div>
+                <div class="textitem2">
+                    <p>* Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, explicabo? Repudiandae voluptatem, libero quis labore quibusdam est exercitationem consequuntur omnis reprehenderit quasi nobis. Est eius perferendis doloribus quaerat accusamus rem tenetur, tempora consequuntur culpa itaque totam soluta nihil amet sequi? Culpa quia perspiciatis praesentium totam voluptatibus laborum, omnis facere suscipit? *</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
