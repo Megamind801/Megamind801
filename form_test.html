@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="form_test.css">
+    <title>Hotel Feedback Form</title>
+</head>
+<body>
+    <header>
+        <h1>Hotel Feedback Form</h1>
+        <p>Thank you for staying with us. Please provide feedback on your recent stay.</p>
+    </header>
+    <main>
+        <form action="https://hotel-feedback.freecodecamp.org" method="POST">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="full-name">Name (required):</label>
+                <input type="text" id="full-name" name="full-name" placeholder="John Doe" size="20" >
+                <label for="email">Email address (required):</label>
+                <input type="email" id="email" name="email" placeholder="example@email.com" size="20">
+                <label for="age">Age (optional):</label>
+                <input type="number" id="age" name="age" >
+            </fieldset>
+            <fieldset>
+                <legend>Was this your first time at our hotel?</legend>
+                <label for="yes-option">Yes</label>
+                <input type="radio" id="yes-option" name="hotel-stay">
+                <label for="no-option">No</label>
+                <input type="radio" id="no-option" name="hotel-stay">
+            </fieldset>
+            <fieldset>
+                <legend>Why did you choose to stay at our hotel? (Check all that apply)</legend>
+                <label for="ads">Social Media Ads</label>
+                <input type="checkbox" id="ads" name="ads" value="ads">
+                <label for="recommendation">Personal Recommendation</label>
+                <input type="checkbox" id="recommendation" name="recommendation" value="recommendation">
+                <label for="location">Location</label>
+                <input type="checkbox" id="location" name="location" value="location">
+                <label for="reputation">Reputation</label>
+                <input type="checkbox" id="reputation" name="reputation" value="reputation" checked>
+                <label for="price">Price</label>
+                <input type="checkbox" id="price" name="price" value="price">
+                <label for="other">Other</label>
+                <input type="checkbox" id="other" name="other" value="other">
+            </fieldset>
+            <fieldset>
+                <legend>Ratings</legend>
+                <label for="service">How was the service?</label>
+                <select name="service" id="service">
+                    <option value="poor">Poor</option>
+                    <option value="satisfactory">Satisfactory</option>
+                    <option value="good">Good</option>
+                    <option value="very-good">Very Good</option>
+                    <option value="excellent" selected>Excellent</option>
+                </select>
+                <label for="food">How was the food?</label>
+                <select name="food" id="food">
+                    <option value="poor">Poor</option>
+                    <option value="satisfactory">Satisfactory</option>
+                    <option value="good">Good</option>
+                    <option value="very-good">Very Good</option>
+                    <option value="excellent" selected>Excellent</option>
+                </select>
+            </fieldset>
+            <label for="comments">Other Comments?</label>
+            <textarea id="comments" name="comments" rows="10" cols="30" placeholder="Your feedback is valuable to us."></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+    <script src="form_test.js"></script>
+</body>
+</html>
