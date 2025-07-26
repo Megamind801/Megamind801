@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Savoré: A Culinary Journey</title>
+    <link rel="shortcut icon" href="/logo.png" type="image/x-icon">
+    <style>
+        :root {
+            --primary: #2e2d2b;
+            --accent: #eab543;
+            --bg: #f9f6f2;
+            --text: #333;
+            --white: #fff;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Montserrat', Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        header {
+            background: url(imgs/photo-1504674900247-0877df9cc836.jpg) center/cover no-repeat;
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: var(--white);
+            text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+            position: relative;
+        }
+        header::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(46,45,43,0.5);
+            z-index: 1;
+        }
+        .header-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 2rem;
+        }
+        .header-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+        }
+        .header-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+        nav {
+            background: var(--white);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            padding: 1rem 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        nav a {
+            color: var(--primary);
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: var(--accent);
+        }
+        .section {
+            padding: 4rem 1rem 2rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 2rem;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+        /* Slideshow */
+        .slideshow-container {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto 3rem auto;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+            background: var(--white);
+        }
+        .slide {
+            display: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transition: opacity 0.8s;
+        }
+        .slide.active {
+            display: block;
+            position: relative;
+            opacity: 1;
+            animation: fadeIn 1s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .slide img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            display: block;
+        }
+        .slide-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(0deg,rgba(46,45,43,0.7) 70%,transparent 100%);
+            color: var(--white);
+            padding: 1.2rem 2rem 1.2rem 1.5rem;
+            font-size: 1.3rem;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+        /* Chefs */
+        .chefs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .chef-card {
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+            text-align: center;
+            padding: 2rem 1rem 1.5rem 1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+        }
+        .chef-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+        }
+        .chef-img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--accent);
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+        }
+        .chef-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        .chef-role {
+            color: var(--accent);
+            font-size: 1rem;
+            margin-bottom: 0.7rem;
+            font-weight: 600;
+        }
+        .chef-bio {
+            font-size: 0.98rem;
+            color: #555;
+            margin-bottom: 0.5rem;
+        }
+        /* Back to top */
+        #backToTop {
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            background: var(--accent);
+            color: var(--primary);
+            border: none;
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            font-size: 1.7rem;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.13);
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+            transition: background 0.2s;
+        }
+        #backToTop:hover {
+            background: #ffd36b;
+        }
+        /* Responsive */
+        @media (max-width: 900px) {
+            .slide img { height: 220px; }
+            .section { padding: 2.5rem 0.5rem 1.5rem 0.5rem; }
+        }
+        @media (max-width: 600px) {
+            .header-content h1 { font-size: 2rem; }
+            .slide-caption { font-size: 1rem; padding: 0.7rem 1rem 0.7rem 1rem; }
+            .chefs-grid { gap: 1rem; }
+            .section-title { font-size: 1.3rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Savoré: A Culinary Journey</h1>
+            <p>Experience a world of flavors, crafted by master chefs. Where every dish tells a story.</p>
+            <a href="#cuisines" style="background:var(--accent);color:var(--primary);padding:0.8rem 2rem;border-radius:30px;font-weight:700;text-decoration:none;font-size:1.1rem;box-shadow:0 2px 8px rgba(0,0,0,0.10);transition:background 0.2s;">Explore Menu</a>
+        </div>
+    </header>
+    <nav>
+        <a href="#cuisines">Cuisines</a>
+        <a href="#chefs">Our Chefs</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section class="section" id="cuisines">
+        <h2 class="section-title">Signature Cuisines</h2>
+        <div class="slideshow-container" id="slideshow">
+            <div class="slide active">
+                <img src="imgs/photo-1504674900247-0877df9cc836.jpg" alt="French Cuisine">
+                <div class="slide-caption">Elegant French Classics</div>
+            </div>
+            <div class="slide">
+                <img src="imgs/istockphoto-1227415751-612x612.jpg" alt="Italian Cuisine">
+                <div class="slide-caption">Rustic Italian Delights</div>
+            </div>
+            <div class="slide">
+                <img src="imgs/japan sushi.jpg" alt="Japanese Cuisine">
+                <div class="slide-caption">Refined Japanese Sushi</div>
+            </div>
+            <div class="slide">
+                <img src="imgs/india cuisine.jpg" alt="Indian Cuisine">
+                <div class="slide-caption">Vibrant Indian Spices</div>
+            </div>
+            <div class="slide">
+                <img src="imgs/Mediterranean.jpg" alt="Mediterranean Cuisine">
+                <div class="slide-caption">Fresh Mediterranean Plates</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="chefs">
+        <h2 class="section-title">Meet Our Chefs</h2>
+        <div class="chefs-grid" id="chefsGrid">
+            <!-- Chef cards will be inserted here by JS -->
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <h2 class="section-title">Contact & Reservations</h2>
+        <div style="text-align:center;max-width:500px;margin:0 auto;">
+            <p style="font-size:1.1rem;margin-bottom:1.2rem;">Ready to embark on your culinary journey? Reserve your table or reach out for special events.</p>
+            <p style="font-size:1.05rem;"><strong>Email:</strong> reservations@savore.com<br>
+            <strong>Phone:</strong> +1 (555) 123-4567</p>
+            <a href="mailto:reservations@savore.com" style="display:inline-block;margin-top:1.5rem;background:var(--primary);color:var(--white);padding:0.7rem 2rem;border-radius:30px;font-weight:700;text-decoration:none;font-size:1rem;transition:background 0.2s;">Book Now</a>
+        </div>
+    </section>
+
+    <button id="backToTop" title="Back to top">&#8679;</button>
+
+    <script src="test.js"></script>
+</body>
+</html>
